@@ -1,0 +1,344 @@
+/* VARIABLES DEFINITION */
+
+:root {
+    font-size: 62.5%; 
+    /* transition: 350ms ease-in-out;  */
+    /* The 1 rem default value of 16px covers to 10px*/
+    --color-principal: #FFFFFF;
+    --color-secundary: #265169;
+
+    --color-background: white;
+    --color-tansparent: #FFFFFF;
+
+    --color-icon: #FFFFFF;
+    --color-title: #265169;
+    --color-subtitles: #2F2F2F;
+    --color-text: #2F2F2F;
+    --shadow: #5f90aa;
+    --hover:#878A8F;
+}
+
+/* GENERAL STYLES */
+/* html {
+    font-size: 10px;
+} */
+
+body {
+    background-color: var(--color-background);
+
+    font-family: "Poppins", Helvetic, sans-serift; 
+    /* font-size: 1.6rem;  */
+    /* set the font-size back to the default 16px*/
+    color: var(--color-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text);
+}
+
+.blue-button {
+    padding: 1rem 2rem;
+    background-color: var(--color-secundary);
+    border: solid 2px var(--color-secundary);
+    border-radius: 3.5rem;
+    color: var(--color-principal);
+}
+
+.white-button {
+    padding: 1rem 2rem;
+    border: solid 2px var(--color-secundary);
+    border-radius: 3.5rem;
+    background-color:var(--color-principal); 
+    color:var(--color-secundary);
+}
+
+.text__underline {
+    border-bottom: solid var(--color-secundary) 6px;
+    }
+
+/* NAV-BAR AND LOGO */
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 100%;
+    padding: 1rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.nav-bar__logo {
+    display: flex;
+    max-width: 40rem;
+}
+
+.logo__icon {
+    position: relative;
+    font-size: 5rem;
+    top: 1rem;
+}
+
+.logo__data {
+    position: relative;
+    margin-left: 2rem;
+    color: var(--hover);
+}
+
+/* NAV-MENU */
+
+.nav-bar__menu {
+    display: flex;
+    justify-content: space-around;
+    width: 80rem;
+}
+
+.menu__list {
+    display: flex;
+    position: relative;
+    top: 1.3rem;
+    transition: 20ms ease-out;
+}
+
+.menu__list:hover {
+    color: var(--hover);
+    font-size: 2.7rem;
+    top: 1.5rem;
+}
+
+.menu__icon {
+    display: none;
+}
+
+
+   /* FLOATING VERTICAL ICON NAVBAR WITH JS */
+
+.menu__overlay--floating {
+    display: none;
+}
+
+.menu__icon--floating{
+    display: initial;
+    font-size: 3rem;
+}
+
+.nav-bar__menu--floating {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    right: .5rem;
+    width: 6rem;
+    height: 35rem;
+
+    align-items: center;
+    border: solid;
+    
+    background-color: white;
+    border-radius: 2rem;
+    border: solid 3px var(--color-secundary);
+
+    color: var(--color-secundary);
+}
+
+/* USER INFO */
+
+.user {
+    display: flex;
+    padding: 6rem 20rem;
+    background-image: url("../img/grid3.1.jpg");
+    background-size: cover;
+    z-index: -2;
+    font-size: 3rem;
+}
+
+.user__info {
+    width: 55%;
+    margin-top: 10%;
+}
+
+.info__job {
+    font-size: 9rem;
+    color: var(--color-title);
+    line-height: 11rem; 
+}
+
+.info__text {
+    width: 80%;
+}
+
+.user__img {
+    width: 65rem;
+    margin: auto 0 auto auto;  
+    overflow: hidden; 
+    border: 7px solid var(--hover);
+    border-radius: 5rem;
+    
+    /* border: solid red; */
+}
+
+.info__button {
+    display: flex;
+    font-size: 2.5rem;
+    /* border: solid red; */
+    padding-top: 3rem;
+}
+
+.button__project {
+    margin-right: 3rem;
+}
+
+.button__project:hover, .button__talk:hover {
+    font-size: 2.7rem;
+    top: 1.5rem;
+}
+
+
+/* no he podido harcelo funcionar */
+/* .user-info__img::after {
+    content: "";
+    position: absolute;
+    top: 16%;
+    left: 66%;
+    z-index: -1;
+    width: 30vw;
+    height: 44vw;
+    border-radius: 5rem;
+    background-size: .6rem .6rem; size of the dots
+    opacity: .3;
+    background-image: -webkit-radial-gradient(center, gray 1px, transparent 100%); 
+} */
+
+
+/* STACK */
+
+.dev-stack {
+    width: 100%;
+    height: auto;
+
+    background-color: var(--color-secundary);
+    padding: 6rem 6rem 7rem 6rem;
+
+    font-size: 4rem;
+    color: white;
+}
+
+.dev-stack__title {
+    margin: 3rem;
+    text-align: center;
+    font-size: 8rem;
+}
+
+.dev-stack__stack {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.stack__icon {
+    display: flex;
+    width: 20%;
+    height: 10rem;
+    margin: 2vw;
+    line-height: 5vw;
+}
+
+.stack__name {
+    margin-left: 1vw;
+}
+
+
+/* PROJECTS  */
+
+.portfolio {
+    width: 100%;
+    padding: 7.85rem;
+    background-color: var(--color-primary);
+    font-size: 5rem;
+}
+
+.portfolio__header {
+    display: flex;
+    justify-content: space-between
+}
+
+.portfolio__projects {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.project__box {
+    width: 43vw;
+    margin: 3vw 0 3vw 0;
+}
+
+.box__links {
+    display: flex;
+    justify-content: space-between;
+    width: 25vw;
+    margin-top: 2vw;
+}
+
+/* SOCIAL  */
+
+.social {
+    width: 100%;
+    height: 10rem;;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--color-secundary);
+    color: var(--color-principal);
+    font-size: 4rem;
+    line-height: 10rem;;
+}
+
+
+/* FOOTER  */
+
+
+.footer {
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    padding: 6vw;
+}
+
+
+.footer_contact {
+    width: 35vw;
+}
+
+.contact__title {
+    font-size: 10rem;
+}
+
+.contact__p {
+    font-size: 3rem;
+}
+
+.footer__form {
+    width: 45%;
+    font-size: 3rem;
+}
+
+.form__box {
+    height: 3vw;
+    outline: 0;
+    border-width: 0 0 2px; 
+    margin-bottom: 3vw; 
+}
+
+
+.form__button {
+    position: relative;
+    left: 18vw;
+    outline: 0;
+    border-width: 0 0 6px; 
+    background-color: var(--color-tansparent);
+}
+
+.fotter__copyright {
+    font-size: 3rem;
+    text-align: center;
+}

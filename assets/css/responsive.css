@@ -1,0 +1,390 @@
+/* DESKTOP */
+.menu__toggle {
+    display: none;
+}
+
+@media (max-width: 1730px) {
+    :root {
+        font-size: 55%;
+    }
+    
+    .user__img { 
+        max-width: 40%;
+    }
+}
+
+
+@media (max-width: 1550px) {
+    :root {
+        font-size: 50%;
+    }
+    
+    .user__img { 
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 1400px) {
+    :root {
+        font-size: 45%;
+    }
+    
+    .user__img { 
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 1260px) {
+    :root {
+        font-size: 40%;
+    }
+}
+
+@media (max-width: 1160px) {
+    :root {
+        font-size: 35%;
+    }
+}
+
+/* TABLET------------------------------------------------------------------------------------------ */
+
+@media (max-width: 820px) {
+    :root {
+        font-size: 30%;
+    }
+
+
+    /* NAV-BAR*/
+    
+    .nav-bar {
+        background-color: var(--color-background);
+    }
+
+    .menu__link {
+        display: none;
+    }
+    
+    .menu__link--tablet {
+        display: initial;
+    }
+
+    .menu__list {
+        vertical-align: baseline;
+        /* border: solid red; */
+    }
+
+
+    .menu__toggle {
+        display: initial;
+        position: absolute;
+        right: 3.8vw;
+        top: 5.5vw;
+        z-index: 4;
+
+        width: 60px;
+        height: 60px;
+        border-radius: 5px;;
+        
+        font-size: 32px;
+        color: var(--color-secundary);
+        text-align: center;
+
+        cursor: pointer;
+        transition: 400ms ease-out;
+    }
+
+     /* SIDE MENU---------------------------------------------- */
+         
+
+    .nav-bar__menu{
+        position:absolute;
+        flex-direction: column;
+        align-items: end;
+        
+        z-index: 2;
+        top: 10vw;
+        right: -99vw;
+        width: 40vw;
+        height: 80vw;
+
+        font-size: 30px; 
+        color: var(--color-background);  
+        transition: 350ms ease-in-out; 
+    }   
+    
+
+    .menu__link {
+        display: initial;
+    } 
+
+    
+    .menu__overlay {
+        padding: 0rem;
+        border: none;
+        background-color: none;
+         
+    }
+
+    body {
+        background-color: var(--color-secundary);
+    }
+
+    main {
+        position: relative;
+        top: 0rem; 
+        width: 100vw;   
+        transition: 400ms ease-in-out; 
+    }
+
+
+    
+    /* JS */
+    /* No he podido crear transiciones suaves, he intentado añadiendoles
+    una transicion al font size del root y utilizando rems
+    para la mayoria de las medidas, pero el tratamudea
+     */
+
+    .main--active{
+        position: relative;
+        top: 20vw;
+        right: 10vw;
+        z-index: 3;  
+
+        width: 60vw;
+        height: 100vw;
+        overflow: hidden;
+        border: solid 1px var(--color-background);
+        border-radius: 3vw; 
+        box-shadow: 50px 0px 10px -10px var(--shadow);
+    }
+
+    .menu__toggle--active {
+        color:  var(--color-principal);
+    }
+
+    .toggle--no-active {      
+        display: none;
+    }
+
+
+    .nav-bar__menu--active {
+        right: 0rem;
+    }
+    
+
+    .menu__icon {
+        position: relative;
+        display: initial;
+        margin: auto 5vw auto 1vw;
+        /* border: solid red; */
+    }
+
+
+    /* USER INFO ---------------------------------*/
+
+    .user {
+        padding: 8rem;
+    }
+
+    .user__info {
+        /* width: 80%; */
+        margin-top: 5%;
+    }
+
+    .info__job {
+        width: 97rem;
+        font-size: 9rem;
+        transition: 350ms;
+
+    }
+    
+    .info__text {
+        width: 80rem;
+    }
+
+    .user__img {
+        position: absolute;
+        width: 62rem;
+        top: 30rem;
+        right: 15rem;
+        border-radius: 30rem;
+    }
+    
+
+
+    /* STACK */
+
+    .dev-stack {
+        padding: 8rem;
+    }
+
+    .dev-stack__title {
+        width: 50%;
+        margin: 0; 
+        font-size: 7rem;
+    }
+
+    .stack__name {
+        font-size: 3.5rem;
+    }
+
+    /* PROJECTS  */
+
+    .portfolio {
+        padding: 8rem;
+        background-color: var(--color-background);
+    }
+
+    /* SOCIAL  */
+
+    .footer {
+        background-color: var(--color-background);
+    }
+
+    .fotter__copyright {
+        background-color: var(--color-background);
+    }
+
+}
+
+/* MOBILE ----------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 500px) {
+
+    :root {
+        font-size: 25%;
+    }
+
+        /* NAV-BAR*/
+        
+    .menu__toggle {
+        top: 8rem;
+    }
+        
+   .nav-bar__menu {   
+    width: 97%;
+    height: 150rem;
+
+    }
+
+    .menu__list {
+        font-size: 6rem;
+        top: 15rem;
+        right: 5rem;
+
+    }
+
+
+    main {
+        top: 0rem; 
+    }
+
+
+    /* JS */
+
+    .main--active{
+        top: 50rem;
+        height: 190rem; 
+        right: 30rem;
+    }
+
+    /* USER*/
+
+    .user {
+           padding: 5rem;
+           height: 76rem;
+    }
+
+    .user__info {
+        width: initial;
+    }
+
+    .info__name {
+        margin-bottom: 3rem;
+    }
+
+    .info__job {
+        font-size: 7rem;
+        line-height: 8rem;
+        margin-bottom: 3rem;
+    }
+
+    .info__text {
+        width: 80rem;
+        margin-bottom: 3rem;
+    }
+
+    .user__img {
+        position: absolute;
+        width: 50rem;
+        top: 50rem;
+        right: 2%;
+    }
+
+    .info__button {
+        width: 40rem;
+        font-size: 2rem;
+    }
+
+        /* STACK */
+
+    .dev-stack {
+        padding: 5rem;
+        height: 97rem;
+    }
+
+    .dev-stack__title {
+        text-align: left;
+        font-size: 5rem;
+    }
+
+    .dev-stack__stack {
+        display: flex;
+        flex-wrap: wrap;
+        height: 40rem;
+    }
+
+    .stack__icon {
+        height: 7rem;
+        margin: 4.5rem;
+    }
+
+    .stack__name {
+        font-size: 2.5rem;
+    }
+
+
+        /* PROJECTS */
+
+    .portfolio {
+        padding: 5rem;
+    }
+
+    .project__box {
+        width: 100%;        
+    } 
+    
+    /* FOOTER  */
+
+
+    .footer {
+        padding: 5vw;
+        font-size: 1rem;
+    }
+
+    .contact__title {
+        font-size: 7rem;
+    }
+
+    .footer__form {
+        width: 45%;
+        margin-top: 12rem;
+        font-size: 2rem;
+    }
+
+    .fotter__copyright {
+        font-size: 2rem;
+    }
+}
+
+/* me quedo en los dos links visibles en tablet */
